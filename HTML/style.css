@@ -1,0 +1,379 @@
+/* 全体設定 */
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 300;
+    background: #fff;
+    color: #333;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 400;
+    transition: opacity 0.3s ease;
+}
+
+a:hover {
+    opacity: 0.6;
+}
+
+/* ヘッダー */
+header {
+    position: fixed;
+    /* 固定表示 */
+    top: 0;
+    /* 上端に配置 */
+    right: 0;
+    width: 100%;
+    background: #fff;
+    /* 背景色（お好みで） */
+    z-index: 1000;
+    /* 前面に表示 */
+    box-shadow: 0 10px 20px rgba(29, 27, 27, 0.922);
+    /* 影をつけると見やすい */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.logo {
+    padding-left: 1rem; /* 左に1rem分の余白 */
+    font-weight: bold;
+    font-size: 2.4rem;
+}
+
+/* 右のナビ囲み用div */
+.nav-wrapper {
+  margin-right: 1rem;
+}
+
+/* ナビの中身 */
+.nav-links {
+  display: flex;
+  gap: 3.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0 1.5rem; /* 右に1.5remの余白 */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* ハンバーガーボタン */
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  display: none; /* PCは非表示 */
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+
+.nav-toggle-label span {
+  display: block;
+  height: 3px;
+  background: #333;
+  border-radius: 2px;
+}
+
+/* スマホ時の表示制御 */
+@media screen and (max-width: 768px) {
+  .nav-toggle-label {
+    display: flex;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+
+  .nav-wrapper {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .nav-wrapper .nav-links {
+    flex-direction: column;
+    gap: 2rem;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  /* チェックが入ったときにメニュー表示 */
+  .nav-toggle:checked ~ .nav-wrapper {
+    display: flex;
+  }
+
+  /* PC時は通常表示 */
+  .nav-links {
+    flex-direction: row;
+  }
+}
+
+/* 閉じるボタン */
+.close-btn {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 2.5rem;
+  color: #000000;
+  text-decoration: none;
+  z-index: 1002;
+  display: none;
+}
+
+
+@media screen and (max-width: 767px) {
+  .close-btn {
+    display: block;
+  }
+}
+
+
+
+
+/* ヒーローセクション */
+.hero-section {
+    width: 100%;
+    margin: 0;
+    padding: 11rem 1rem 12rem 0rem;
+    position: relative;
+    color: #fff;
+    text-align: center;
+    background-image: url('pexels-alex-dos-santos-305643819-32506571.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.522);
+    z-index: 0;
+}
+
+.hero-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero-inner h1 {
+    font-size: 3.8rem;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.1em;
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.hero-inner p {
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* セクション共通 */
+.section {
+    max-width: 1100px;
+    margin: 0 auto 6rem auto;
+    padding: 0 1rem;
+    scroll-margin-top: 65px; /* ヘッダーの高さに合わせて調整 */
+}
+
+.section-inner {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.section h2 {
+    font-weight: 300;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    position: relative;
+    text-align: center;
+    display: inline-block;
+}
+
+.section h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Worksリスト */
+.works-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.works-list li {
+    width: 320px;
+}
+
+.works-list img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.works-list img:hover {
+    transform: translateY(-6px);
+}
+
+figcaption {
+    margin-top: 1rem;
+    font-weight: 300;
+    color: #666;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* SNSリンク */
+.sns-links {
+    max-width: 1100px;
+    margin: 0 auto 6rem auto;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.sns-links .section-inner {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.sns-links h2 {
+    font-weight: 300;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    position: relative;
+    display: inline-block;
+    text-align: left;
+}
+
+.sns-links h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    border-bottom: 1px solid #ddd;
+}
+
+.sns-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.sns-links i {
+    font-size: 2rem;
+}
+
+/* お問い合わせフォーム */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: vertical;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #999;
+}
+
+.contact-form button {
+    background: #f5f5f5;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0.75rem 0;
+    font-weight: 300;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* フッター */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    font-weight: 300;
+    font-size: 0.9rem;
+    color: #999;
+    border-top: 1px solid #eee;
+    margin-top: 4rem;
+}

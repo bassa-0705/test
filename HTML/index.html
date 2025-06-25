@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>サンプル太郎のポートフォリオ</title>
+    <!-- Google Fonts: Noto Sans JP (細め) -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <nav class="nav-container">
+            <div class="logo">Portfolio</div>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <!-- ナビゲーションメニュー -->
+            <div class="nav-wrapper">
+                <!-- ×ボタン -->
+                <a href="#" class="close-btn">×</a>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#works">Works</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#sns-links">SNS</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- メイン -->
+    <main>
+        <!-- ヒーローセクション -->
+        <section class="hero-section">
+            <div class="hero-inner">
+                <h1>サンプル太郎</h1>
+                <p>シンプルで美しいWebサイトをつくります。</p>
+            </div>
+        </section>
+
+        <!-- 自己紹介セクション -->
+        <section id="about" class="section">
+            <div class="section-inner">
+                <h2>About</h2>
+                <p>フロントエンドを中心に、UI/UXデザインを意識したコーディングを行っています。<br />
+                    柔軟でシンプルなサイト制作を心がけています。</p>
+            </div>
+        </section>
+
+        <!-- 制作実績 -->
+        <section id="works" class="section">
+            <div class="section-inner">
+                <h2>Works</h2>
+                <ul class="works-list">
+                    <li>
+                        <figure>
+                            <img src="portfolio.jpg" alt="ポートフォリオサイトのスクリーンショット" />
+                            <figcaption>ポートフォリオサイト制作</figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="lp-design.jpg" alt="ランディングページデザイン" />
+                            <figcaption>LPデザイン</figcaption>
+                        </figure>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- お問い合わせ -->
+        <section id="contact" class="section">
+            <div class="section-inner">
+                <h2>Contact</h2>
+                <form class="contact-form">
+                    <input type="text" placeholder="お名前" required />
+                    <input type="email" placeholder="メールアドレス" required />
+                    <textarea placeholder="お問い合わせ内容" rows="5"></textarea>
+                    <button type="submit">送信</button>
+                </form>
+            </div>
+        </section>
+
+                <!-- SNSリンク -->
+        <section id="sns-links" class="section">
+            <div class="section-inner">
+                <h2>SNS</h2>
+                <div class="sns-links">
+                    <a href="https://x.com/yourprofile" target="_blank" aria-label="X (Twitter)">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/yourprofile" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer>
+        <p>© 2025 サンプル太郎</p>
+    </footer>
+</body>
+
+</html>
